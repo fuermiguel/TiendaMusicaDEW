@@ -6,14 +6,15 @@ function inicio() {
 
     //Cargar el option del formulario
     let tipoMusica = document.getElementById("tipo");
-
-    for (let i = 0; i < tipoMusica.options.length; i++) {
-        tipoMusica.options[i + 1].value = Object.values(Tipo_Musica)[i];
-        tipoMusica.options[i + 1].innerHTML = Object.keys(Tipo_Musica)[i];
+    console.log(Object.keys(Tipo_Musica));
+    for (let i = 1; i < tipoMusica.options.length; i++) {
+        tipoMusica.options[i].value = Object.values(Tipo_Musica)[i - 1];
+        tipoMusica.options[i].innerHTML = Object.keys(Tipo_Musica)[i - 1];
     }
 
+    //Cargo la tienda
     let tienda = new Tienda();
-
+    console.log("hola");
     console.log(document.getElementById('fecha'));
 
     let btnGuardar = d.getElementById('guardar');
