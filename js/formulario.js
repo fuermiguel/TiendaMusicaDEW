@@ -6,17 +6,11 @@ function inicio() {
 
     //Cargar el option del formulario
     let tipoMusica = document.getElementById("tipo");
-    console.log("hola");
-    tipoMusica.options[1].value = Tipo_Musica["ROCK"];
-    tipoMusica.options[2].value = Tipo_Musica["POP"];
-    tipoMusica.options[3].value = Tipo_Musica["PUNK"];
-    tipoMusica.options[4].value = Tipo_Musica["INDIE"];
 
-    tipoMusica.options[1].innerHTML = Object.keys(Tipo_Musica)[0];
-    tipoMusica.options[2].innerHTML = Object.keys(Tipo_Musica)[1];
-    tipoMusica.options[3].innerHTML = Object.keys(Tipo_Musica)[2];
-    tipoMusica.options[4].innerHTML = Object.keys(Tipo_Musica)[3];
-
+    for (let i = 0; i < tipoMusica.options.length; i++) {
+        tipoMusica.options[i + 1].value = Object.values(Tipo_Musica)[i];
+        tipoMusica.options[i + 1].innerHTML = Object.keys(Tipo_Musica)[i];
+    }
 
     let tienda = new Tienda();
 
