@@ -67,6 +67,8 @@ class Tienda {
 
 
 
+
+
 // let tienda = new Tienda();
 
 // tienda.addDisco({ titulo: 'titulo1', cantante: 'cantante1', tipo: 'tipo1', fecha: 1, estanteria: 10, prestado: false });
