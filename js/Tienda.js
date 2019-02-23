@@ -8,8 +8,7 @@ class Tienda {
     }
 
     addDisco({ titulo, cantante, tipo, fecha, estanteria, prestado }) {
-        //si ya existe un disco con el mismo titulo return false;
-        if (this._discos.some((elem) => elem.titulo == titulo)) return false;
+
         //Sino continuo añadiendo el disco  a la tienda y devolviendo un true
         this._discos.push({ titulo, cantante, tipo, fecha, estanteria, prestado });
         return true;
@@ -64,6 +63,8 @@ class Tienda {
 
     };
 };
+
+export { Tienda };
 
 
 

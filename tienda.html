@@ -5,7 +5,6 @@
     <title>Mi tienda de discos</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="style/tienda.css" />
-    <script src="./js/Tienda.js"></script>
     <script type="module" src="./js/formulario.js"></script>
 
 </head>
@@ -18,22 +17,22 @@
 
         <div class="linea_formulario limpia">
             <label for="titulo">Título del disco</label>
-            <input type="text" name="titulo" id="titulo" />
+            <input type="text" name="titulo" id="titulo" required/>
         </div>
 
         <div class="linea_formulario limpia">
             <label for="cantante">Cantante</label>
-            <input type="text" name="cantante" id="cantante" />
+            <input type="text" name="cantante" id="cantante" required/>
         </div>
 
         <div class="linea_formulario limpia">
             <label for="fecha">Fecha</label>
-            <input type="date" name="fecha" id="fecha" />
+            <input type="date" name="fecha" id="fecha" required pattern="^([0-2][0-9]|3[0-1])(\/|-)(0[1-9]|1[0-2])\2(\d{4})$" />
         </div>
 
         <div class="linea_formulario limpia">
             <label for="estanteria">Estantería</label>
-            <input type="text" name="estanteria" id="estanteria" />
+            <input type="number" name="estanteria" id="estanteria" min=1 max=10 required/>
         </div>
 
         <div class="linea_formulario limpia">
@@ -56,7 +55,7 @@
         </div>
 
         <div class="linea_formulario limpia">
-            <input type="button" id="guardar" value="Guardar disco" />
+            <input type="submit" id="guardar" value="Guardar disco" />
             <input type="button" id="eliminar" value="Eliminar disco" />
             <input type="button" id="ver" value="Ver disco" />
             <input type="button" id="modificar" id="enviar" value="Modificar disco" />
